@@ -1,0 +1,32 @@
+/* Introduction Section */
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: url('../..public/images/background.png') no-repeat center center/cover;
+    padding: 80px;
+  }
+  
+  .intro-text {
+    width: 50%;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 2;
+    text-align: left;
+  }
+  
+  .intro-image {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px); /* Blurred Background on Right Side */
+    z-index: 1;
+  }
+  

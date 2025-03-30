@@ -1,0 +1,38 @@
+/* Navbar Section */
+.navbar {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    padding: 10px 0;
+    background-color: #00001b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  
+  /* Navbar Items */
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center menu items horizontally */
+    gap: 10px; /* Adds spacing between menu items */
+  }
+  
+  .navbar ul li {
+    display: inline-block;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #d4af37; /* Golden Hover Effect */
+  }
