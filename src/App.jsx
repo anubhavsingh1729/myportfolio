@@ -49,24 +49,21 @@ const App = () => {
   };
 
   return(
-    <div>
+    <div className='parent-container'>
         <div className='header-container'>
           <header className='header'>
             <h1 className='heading'>Anubhav Singh</h1>
           </header>
-          <Navbar />
         </div>
-          
-      <main>
-        <div className='introduction-container'>
-          <Introduction />
-        </div>
-
+        <div className="main">
+        <Introduction />
         <Cards onCardClick={handleCardClick} expandedCard={expandedCard} />
-      </main>
-      <footer className='footer'>
+        </div>
+        
+
+      {/* <footer className='footer'>
         <p>© 2023 Anubhav Singh. All rights reserved.</p>
-      </footer>
+      </footer> */}
     </div>
   )
 

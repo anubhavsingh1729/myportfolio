@@ -5,12 +5,12 @@ const Cards = ({ onCardClick, expandedCard }) => {
   const cards = [
     { id: 1, title: 'Project 1', description: 'Description of Project 1' },
     { id: 2, title: 'Project 2', description: 'Description of Project 2' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3' }
+    { id: 3, title: 'Project 3', description: 'Description of Project 3' },
+    { id: 4, title: 'Project 1', description: 'Description of Project 1' }
   ];
 
   return (
     <section id="cards" className="cards">
-      <h2>My Projects</h2>
       <div className="card-container">
         {cards.map((card) => (
           <div
