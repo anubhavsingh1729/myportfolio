@@ -3,10 +3,10 @@ import '../css/cards.css';
 
 const Cards = ({ onCardClick, expandedCard }) => {
   const cards = [
-    { id: 1, title: 'Project 1', description: 'Description of Project 1' },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3' },
-    { id: 4, title: 'Project 1', description: 'Description of Project 1' }
+    { id: 1, title: 'Education & Experience', description: 'Three turns, should do it, I think.', image: "/timeturner.gif"},
+    { id: 2, title: 'Projects & Blogs', description: 'This? It is called a Pensieve.',image: "/pensieve.webp" },
+    { id: 3, title: 'Skills and Certifications', description: 'If you have to ask, you’ll never know. If you know, you need only ask.',image: "/roomofreq.png" },
+    { id: 4, title: 'Contact', description: 'Owl Post is reliable, usually.',image: "/hedwig.jpg" }
   ];
 
   return (
@@ -17,8 +17,9 @@ const Cards = ({ onCardClick, expandedCard }) => {
             key={card.id}
             className={`card ${expandedCard === card.id ? 'expanded' : ''}`}
             onClick={() => onCardClick(card.id)}
+            style={{ backgroundImage: `url(${card.image})` }}
           >
-            <h3>{card.title}</h3>
+            <h3 className='card-title'>{card.title}</h3>
             {expandedCard === card.id ? <p>{card.description}</p> : null}
           </div>
         ))}

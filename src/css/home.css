@@ -17,27 +17,38 @@
 
 /* header section */
 .header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-  position: fixed;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* padding: 10px 0; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* z-index: 1000; */
+  /* width: 100vw; */
+  background-color: #00001b;
+  transition: background-color .3s ease-in;
+
+  width: 100%;
+  /* background-color: #1a1a1a;  */
+  /* padding: 10px 0px; */
+  text-align: center;
+  position: fixed; /* Keeps it at the top */
   top: 0;
   left: 0;
-  z-index: 1000;
-  width: 100vw;
-  background-color: #00001b;
+  z-index: 1000; /* Ensures it stays above other content */
+  
 }
 
 .header {
-  width: 100vw;
+  /* width: 100vw; */
   text-align: center;
   padding: 5px 0;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-bottom: #f4f4fa solid 3px;
+  border-bottom: solid 1px #ffffff;
 }
 
 
@@ -51,24 +62,20 @@
   margin: 0;
   font-family: "HarryPotter", sans-serif;
   letter-spacing: 3px;
-  color: white;
+  color: #FFA500;
   font-weight: bold;
+  text-shadow: 
+        3px 3px 0px #8B0000,  /* Dark Red Shadow */
+        6px 6px 5px rgba(0, 0, 0, 0.5); /* Black Soft Shadow */
 }
 
-.main {
-  width: 100%;
-  padding-top: 80px;
-  align-items: center;
-  gap: 0px;
-  padding-bottom: 100px;
-}
 
 .parent-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   width: 100%;
-  background-color: #ebebed;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   
 }
 

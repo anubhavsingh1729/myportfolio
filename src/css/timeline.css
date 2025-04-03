@@ -1,0 +1,85 @@
+.timeline {
+    display :  flex;
+    flex-direction: column;
+    background-image: url(/horizons_village.png),url(/stars.png),linear-gradient(180deg,#15111d,#323657 121.35%);
+    background-position: bottom, center;
+    /* padding: 10px 0; */
+    background-size: 100% auto,100% auto; 
+    flex: 1 1 auto;
+    width: 100%;
+    height: fit-content;
+    background-repeat: no-repeat;
+    align-items: left;
+  }
+
+/* .timeline {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 0;
+  }
+   */
+  .timeline-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 3px solid gold;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .timeline-item h3 {
+    color: gold;
+    font-size: 1.5rem;
+  }
+  
+  .timeline-item p {
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+
+
+  /* Main container to align everything in a row */
+.heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing */
+}
+
+/* Horizontal lines */
+.line {
+    flex: 1; /* Lines take up available space */
+    height: 2px;
+    background: #fff; /* Line color */
+    opacity: 0.6;
+}
+
+/* Diamonds on both sides */
+.diamond {
+    font-size: 18px;
+    color: #fff; /* Diamond color */
+}
+
+/* Circular icon container */
+.round-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Ensures the image stays inside the circular frame */
+.round-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the GIF fully visible */
+    border-radius: 50%; /* Ensures perfect roundness */
+}

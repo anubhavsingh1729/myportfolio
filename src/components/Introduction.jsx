@@ -4,12 +4,12 @@ import "../css/introduction.css";
 const Introduction = () => {
   return (
       <section id="introduction" className="introduction">
-        <h2>Welcome to My Magical Portfolio</h2>
+        <h2 className='intro-head'>Welcome to My Magical Portfolio</h2>
         <div className='intro-text'>
-        <p>Immerse yourself in the world of magic and technology. Here, I showcase my work, passion, and journey.
-        Immerse yourself in the world of magic and technology. Here, I showcase my work, passion, and journey.
-        Immerse yourself in the world of magic and technology. Here, I showcase my work, passion, and journey.
-        </p>
+        Master’s in data science with industry experience in Data analytics, ETL development and BI reporting. 
+        Experienced in managing independent projects, working in international cross-functional teams, 
+        conducting explorative data analyses, and implementing efficiency-enhancing solutions in digitalization initiatives. 
+        Proficient in Python, Machine learning, SQL, PowerBI, Tableau and ETL pipelines.
     </div>
     </section>
   );

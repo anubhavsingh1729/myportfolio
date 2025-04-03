@@ -1,30 +1,49 @@
 /* Introduction Section */
 .introduction {
     background: url('/background.png') no-repeat center/cover;
-    width: 100%;
+    /* width: 100%;
     position: relative;
     background-size: 100% auto;
-    height: fit-content;
+    padding-bottom: 30vw; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
   }
-  
+
   .intro-text {
-    width: 50%;
-    font-size: 1.5rem;
-    color: white;
-    text-align: left;
+    width: 70%;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    /* text-align: left; */
     font-family: "dragonhunter", sans-serif;
     font-size: 1;
     font-weight: normal;
-    padding:  30px;
-    padding-bottom: 100px;
+    /* padding-left:  30px; */
+    padding-bottom: 20px;
+    /* padding-top: 0;  */ 
+    z-index: 999;
+
 
   }
 
-  h2 {
-    padding: 10px 30px ;
+  .intro-head {
+    /* padding-left: 30px ; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 0; */
     font-family: harry7;
-    font-weight: bold;
-    font-size: 2.5rem;
+    font-weight: 1000px;
+    font-size: 60px;
+    max-width: 50%;
+    text-transform: uppercase;
   }
 
   @font-face {
@@ -47,13 +66,35 @@
     background: linear-gradient(rgba(31, 30, 30, 0), #242633);
 } */
 
-.introduction::before {
+/* .introduction::before {
     content: "";
-    background: linear-gradient(1turn,#15111d 40%,rgba(21,17,29,0));
+    background: linear-gradient(1turn,#15111d 30%,rgba(21,17,29,0));
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 150px;
+    height: 80px;
+} */
+
+.introduction::before {
+  content: "";
+  background: linear-gradient(1turn,#15111d 40%,rgba(21,17,29,0));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 1.5rem;
+  }
+  .introduction {
+      padding: 40px 10px;
+  }
+  .introduction::after {
+    height: 10vh; /* Reduce fade height for smaller screens */
+}
 }
 
