@@ -39,9 +39,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
 import "./css/home.css";
-import Education from './components/education';
-import Project from './components/project';
-import EdandExp from './components/edandexp';
+import VerticalTimeline from './components/timeline';
 
 const App = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -59,7 +57,7 @@ const App = () => {
         </div>
         <div className="main">
         <Introduction />
-        <EdandExp />
+        <VerticalTimeline />
         </div>
       {/* <footer className='footer'>
         <p>© 2023 Anubhav Singh. All rights reserved.</p>

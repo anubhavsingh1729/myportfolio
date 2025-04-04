@@ -1,85 +1,151 @@
-.timeline {
-    display :  flex;
-    flex-direction: column;
-    background-image: url(/horizons_village.png),url(/stars.png),linear-gradient(180deg,#15111d,#323657 121.35%);
-    background-position: bottom, center;
-    /* padding: 10px 0; */
-    background-size: 100% auto,100% auto; 
-    flex: 1 1 auto;
+.timeline-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/horizons_village.png),
+                    url(/stars.png),
+                    url(/stars.png),
+                    url(/stars.png),
+                    linear-gradient(180deg,#15111d,#323657 121.35%);
+
+    background-position: bottom, center 40%, top, center 80%;
+    background-size: 100% auto,
+    110% auto,
+    110% auto,
+    110% auto;
+    /* flex: 1 1 auto; */
     height: fit-content;
     background-repeat: no-repeat;
-    align-items: left;
-  }
-
-/* .timeline {
     position: relative;
-    max-width: 600px;
-    margin: auto;
-    padding: 50px 0;
-  }
-   */
-  .timeline-item {
-    background: rgba(255, 255, 255, 0.1);
+    padding-bottom: 50px;
+}
+
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    top: 50px;
+    left: 50%;
+    width: 4px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: shimmer 2s infinite alternate ease-in-out;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+
+}
+
+.item-container {
+    background: #323657;
+    position: relative;
+    width: 30%;
+    margin: 20px;
+    height: 200px;
+}
+.item-container.left {
+    left: 14%
+
+}
+
+.item-container.right {
+    left : 54%;
+}
+
+.item-content {
+    width: 100%;
+    height: 100%;
     padding: 20px;
-    margin: 20px 0;
-    border-left: 3px solid gold;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-  }
-  
-  .timeline-item h3 {
-    color: gold;
-    font-size: 1.5rem;
-  }
-  
-  .timeline-item p {
-    font-style: italic;
-    font-size: 1rem;
-    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.notch {
+    position: absolute;
+    top: 10%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px;
+    transform: translateY(-10%);
   }
 
+.left .notch {
+    right: -40px; 
+    transform: rotate(180deg);
+    border-color: transparent #323657 transparent transparent;
+  }
 
-  /* Main container to align everything in a row */
+  .right .notch {
+    left: -40px; 
+    border-color: transparent #323657 transparent transparent;
+  }
+
+  .icon {
+    top: 80px;
+    left: 48%;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #15111d;
+    border-radius: 50%;
+    border: 3px solid #fbfdff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+  }
+
+  .icon svg{
+    font-size: 36px;
+    z-index: 3;
+  }
+
 .heading-container {
+    padding-top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px; /* Adjust spacing */
-}
-
-/* Horizontal lines */
-.line {
-    flex: 1; /* Lines take up available space */
-    height: 2px;
-    background: #fff; /* Line color */
-    opacity: 0.6;
-}
-
-/* Diamonds on both sides */
-.diamond {
-    font-size: 18px;
-    color: #fff; /* Diamond color */
-}
-
-/* Circular icon container */
-.round-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* Ensures the image stays inside the circular frame */
-.round-icon img {
+    flex-direction: row;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps the GIF fully visible */
-    border-radius: 50%; /* Ensures perfect roundness */
 }
+
+.diamond {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff; 
+    transform: rotate(45deg); 
+    background: transparent;
+}
+
+.line {
+    flex: 1; /* Adjust line length */
+    height: 2px;
+    max-width: 400px;
+    min-width: 10px;
+    background: linear-gradient(to right, transparent, #fff    , transparent); /* Fading effect */
+    opacity: 0.7;
+}
+
+.title {
+    font-weight:800;
+    font-size:25px;
+    font-family: "dragonhunter";
+}
+@font-face {
+    font-family: "dragonhunter";
+    src: url("../assets/finders/dragonhunter.ttf") format("truetype");
+  }
+
+  .magic-glow {
+    position: relative;
+    animation: shimmer 2s infinite alternate ease-in-out;
+  }
+  
+  @keyframes shimmer {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+  }
+  

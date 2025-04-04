@@ -9,7 +9,7 @@ const Introduction = () => {
         Master’s in data science with industry experience in Data analytics, ETL development and BI reporting. 
         Experienced in managing independent projects, working in international cross-functional teams, 
         conducting explorative data analyses, and implementing efficiency-enhancing solutions in digitalization initiatives. 
-        Proficient in Python, Machine learning, SQL, PowerBI, Tableau and ETL pipelines.
+        Proficient in Python, Machine learning, SQL, PowerBI and Tableau.
     </div>
     </section>
   );
