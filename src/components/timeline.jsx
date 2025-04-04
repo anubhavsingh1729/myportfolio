@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "../css/timeline.css"
+import Header from "./heading";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
@@ -33,21 +34,12 @@ const timelineData = [
 const VerticalTimeline = () => {
   return (
     <div className="timeline-container">
-        <div class="heading-container">
-            <span className="line"></span> 
-            <span className="diamond"></span>
-            <span>◆</span>
-            <span class="title">Education and Work Experience</span>
-            <span>◆</span>
-            <span className="diamond"></span>
-            <span className="line"></span>
-        </div>
+      <Header heading={"Education and Work Experience"} />
       {timelineData.map((item,index) => (
         <div className="items">
           <div className="icon">
           <FontAwesomeIcon icon={item.type === 'ed' ? faGraduationCap : faBriefcase} /> 
           </div>
-              {/* <div key = {index} className={`item-container ${item.id % 2 === 0 ? "left" : "right"}`}> */}
               <motion.div
                 key={index}
                 className={`item-container magic-glow ${index % 2 === 0 ? "left" : "right"}`}

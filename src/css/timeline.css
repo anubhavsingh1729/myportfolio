@@ -25,23 +25,25 @@
     content: "";
     position: absolute;
     bottom: 50px;
-    top: 50px;
+    top: 10%;
     left: 50%;
     width: 4px;
     background-color: #ffffff;
     transform: translateX(-50%);
     z-index: 1;
     animation: shimmer 2s infinite alternate ease-in-out;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
 
 }
 
 .item-container {
-    background: #323657;
+    background: rgba(50, 54, 87, 0.2);
     position: relative;
     width: 30%;
     margin: 20px;
     height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
 }
 .item-container.left {
     left: 14%
@@ -69,17 +71,18 @@
     border-style: solid;
     border-width: 20px;
     transform: translateY(-10%);
+
   }
 
 .left .notch {
     right: -40px; 
     transform: rotate(180deg);
-    border-color: transparent #323657 transparent transparent;
+    border-color: transparent  rgba(50, 54, 87, 0.5) transparent transparent;
   }
 
   .right .notch {
     left: -40px; 
-    border-color: transparent #323657 transparent transparent;
+    border-color: transparent  rgba(50, 54, 87, 0.5) transparent transparent;
   }
 
   .icon {
@@ -100,43 +103,6 @@
   .icon svg{
     font-size: 36px;
     z-index: 3;
-  }
-
-.heading-container {
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Adjust spacing */
-    flex-direction: row;
-    width: 100%;
-}
-
-.diamond {
-    width: 12px;
-    height: 12px;
-    border: 2px solid #fff; 
-    transform: rotate(45deg); 
-    background: transparent;
-}
-
-.line {
-    flex: 1; /* Adjust line length */
-    height: 2px;
-    max-width: 400px;
-    min-width: 10px;
-    background: linear-gradient(to right, transparent, #fff    , transparent); /* Fading effect */
-    opacity: 0.7;
-}
-
-.title {
-    font-weight:800;
-    font-size:25px;
-    font-family: "dragonhunter";
-}
-@font-face {
-    font-family: "dragonhunter";
-    src: url("../assets/finders/dragonhunter.ttf") format("truetype");
   }
 
   .magic-glow {

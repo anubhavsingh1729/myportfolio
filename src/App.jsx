@@ -40,6 +40,7 @@ import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
 import "./css/home.css";
 import VerticalTimeline from './components/timeline';
+import Projects from './components/projects';
 
 const App = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -58,6 +59,7 @@ const App = () => {
         <div className="main">
         <Introduction />
         <VerticalTimeline />
+        <Projects />
         </div>
       {/* <footer className='footer'>
         <p>© 2023 Anubhav Singh. All rights reserved.</p>
