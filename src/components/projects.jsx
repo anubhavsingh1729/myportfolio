@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 import Header from "./heading";
 import "../css/projects.css";
 import scripturelm from "/scripturelm.webp";
-import pyspark from "/pyspark.png";
+import pysparkimg from "/pyspark.png";
+import deeplabv3 from "/deeplabv3.jpg";
+import bert from "/bert.jpg";
+import made from "/made.png";
 
 
 
@@ -12,25 +15,25 @@ const projects = [
         tags : ['Python', 'FastAPI', 'LLM', 'FAISS', 'Google LongT5'],
         link:'https://medium.com/@anubhavsingh1729/building-scripturelm-ai-powered-bible-study-with-semantic-search-and-summarization-b0b40e27daf3'
     },
-    {id: 2, title : 'GitHub Commit Data Analysis', image:pyspark,
+    {id: 2, title : 'GitHub Commit Data Analysis', image: pysparkimg,
         description : 'PySpark pipeline for processing GitHub commits and visualizing trends.',
         tags : ['Python', 'PySpark', 'Data Analysis'],
         link:'https://medium.com/@anubhavsingh1729/aggregating-github-commit-data-using-a-pyspark-pipeline-0b3011a74017'
     },
     {id: 3, title : 'Road Scene Understanding for Visually Impaired', 
-        image:'/deeplabv3.jpg',
+        image: deeplabv3,
         description : 'Sidewalk detection using DeepLabV3+ for visually impaired navigation.',
         tags : ['Python', 'DeepLabV3+', 'Computer Vision'],
         link:'https://github.com/anubhavsingh1729/RSU-VI'
     },
     {id: 4, title : 'Deterministic Classification of Git Commits', 
-        image:'/bert.jpg',
+        image: bert,
         description : 'a machine learning-based framework for classifying GitHub commits according to the OECD\'s DEMPE functions, focusing on transfer pricing compliance.',
         tags : ['Python', 'Machine Learning', 'GitHub','Transfer Pricing','BERT','transfer learning'],
         link:'https://github.com/anubhavsingh1729/dempe-classification'
     },
     {id: 5, title : 'Correlation analysis: R&D investment and HDI', 
-        image:'/made.png',
+        image: made,
         description : 'analyze how government spending on research and development activity affects the trend in human development index.',
         tags : ['Python', 'Data Analysis', 'Correlation Analysis'],
         link:'https://github.com/anubhavsingh1729/MADE/blob/main/project/report.ipynb'
