@@ -52,27 +52,29 @@ aside.context {
 	right: 0;
 	transition: 0.5s ease;
 	top: 25%;
-	&__front,
-	&__back {
+}
+.map-flap__front,
+.map-flap__back {
 		backface-visibility: hidden;
 		width: 100%;
 		height: 100%;
 		position: absolute;
 	}
-	&__back {
+.map-flap__back {
 		transform: scale(-1) rotateY(180deg);
 	}
-	&.flap--1 {
+.map-flap.flap--1 {
 		box-shadow: 0 -1px 6px rgba(#615349, 0.5);
-		.map-flap__front {
+}
+.map-flap.flap--1.map-flap__front {
 			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-1.png") center left /
 				cover;
 		}
-		.map-flap__back {
+.map-flap.flap--1.map-flap__back {
 			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-3.png") -3px 0/ cover;
 		}
-	}
-	&.flap--2 {
+
+.map-flap.flap--2 {
 		box-shadow: 0 1px 6px rgba(#615349, 0.5);
 		top: 50%;
 		.map-flap__front {
@@ -83,7 +85,6 @@ aside.context {
 			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-4.png") -3px 0/ cover;
 		}
 	}
-}
 
 .map-side {
 	height: 600px;
