@@ -1,15 +1,8 @@
 /* Introduction Section */
 .introduction {
     background: url('/background.png') no-repeat center/cover;
-    /* width: 100%;
-    position: relative;
-    background-size: 100% auto;
-    padding-bottom: 30vw; */
-
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     max-width: 100%;
     padding-bottom: 30px;
@@ -19,17 +12,17 @@
   }
 
   .intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 70%;
-    font-size: 20px;
-    font-weight: 800;
-    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight:800;
+    color: rgb(228, 228, 228);
     /* text-align: left; */
-    font-family: "dragonhunter", sans-serif;
-    font-size: 1;
-    font-weight: normal;
-    /* padding-left:  30px; */
     padding-bottom: 20px;
-    /* padding-top: 0;  */ 
+    padding-top: 10px;  
     z-index: 999;
   }
 
@@ -38,15 +31,15 @@
     /* padding-top: 10px; */
     /* padding-bottom: 0; */
     font-family: harry7;
-    font-weight: 1000px;
+    font-weight: 900px;
     font-size: 60px;
     max-width: 90%;
     text-transform: uppercase;
-    overflow: hidden;
-    white-space: normal; /* Allow text to wrap naturally */
-    word-wrap: normal; /* Prevent breaking words */
-    overflow-wrap: break-word; /* Ensure long words wrap properly */
-    word-break: keep-all;
+    /* overflow: hidden;
+    white-space: normal;
+    word-wrap: normal; 
+    overflow-wrap: break-word; 
+    word-break: keep-all; */
   }
   
   @font-face {
@@ -89,6 +82,26 @@
   height: 150px;
 }
 
+.cloud {
+  position: absolute;
+  width: 200%;
+  opacity: 0.8; 
+  height: 50%;
+  filter: brightness(1.5);
+
+}
+
+.cloud-left {
+  top :20%;
+  left: 0; /* Start position off-screen to the left */
+  animation: move-left 100s linear infinite; /* Move left to right */
+}
+
+.cloud-right {
+  top: 40%;
+  right: 0; /* Start position off-screen to the right */
+  animation: move-right 100s linear infinite; /* Move right to left */
+}
 
 @media (max-width: 768px) {
   .header h1 {
@@ -113,15 +126,20 @@
   text-shadow: 0 0 3px #00000077;
 }
 
-@keyframes soakIn {
+@keyframes move-left {
   0% {
-    opacity: 0;
-    transform: scale(1.2) rotate(2deg);
-    filter: blur(4px);
+      transform: translateX(0); /* Start at the initial position */
   }
   100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    filter: blur(0);
+      transform: translateX(-100vw); /* Move completely across the screen */
+  }
+}
+
+@keyframes move-right {
+  0% {
+      transform: translateX(0); /* Start at the initial position */
+  }
+  100% {
+      transform: translateX(100vw); /* Move completely across the screen */
   }
 }

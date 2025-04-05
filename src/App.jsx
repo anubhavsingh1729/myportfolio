@@ -47,6 +47,7 @@ import Projects from './components/projects';
 import Skills from './components/skills';
 import "./css/contactform.css"
 import owl from "/owl.png";
+import MaraudersMap from './components/homepage';
 
 const App = () => {
   // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

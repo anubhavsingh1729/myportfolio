@@ -8,7 +8,6 @@ import bert from "/bert.jpg";
 import made from "/made.png";
 
 
-
 const projects = [
     {id : 1, title : 'ScriptureLM',  image: scripturelm ,
         description : ' AI-powered semantic search and text summarisation using FastAPI, FAISS, and Google LongT5 LLM',
