@@ -4,7 +4,7 @@ import "../css/projects.css";
 import { link } from "motion/react-client";
 
 const projects = [
-    {id : 1, title : 'ScriptureLM',  image: '/public/scripturelm.webp',
+    {id : 1, title : 'ScriptureLM',  image: `${import.meta.env.BASE_URL}scripturelm.webp` ,
         description : ' AI-powered semantic search and text summarisation using FastAPI, FAISS, and Google LongT5 LLM',
         tags : ['Python', 'FastAPI', 'LLM', 'FAISS', 'Google LongT5'],
         link:'https://medium.com/@anubhavsingh1729/building-scripturelm-ai-powered-bible-study-with-semantic-search-and-summarization-b0b40e27daf3'
