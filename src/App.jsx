@@ -46,6 +46,7 @@ import VerticalTimeline from './components/timeline';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import "./css/contactform.css"
+import owl from "/owl.png";
 
 const App = () => {
   // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -91,7 +92,7 @@ const App = () => {
 
             <h1 className='heading'>Anubhav Singh</h1>
             <div className='header-right'>
-                <img src="/owl.png" alt="Email" className="owlpost" 
+                <img src={owl} alt="Email" className="owlpost" 
                 onClick={toggleContactForm} /* Open the contact form */
                 />
             </div>

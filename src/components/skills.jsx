@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "./heading";
 import "../css/skills.css";
+import elderwand from "/elderwand.png";
+import stone from "/stone.png";
+import cloak from "/cloak.png";
 
 const skills = [
     { id: 1,
@@ -13,7 +16,7 @@ const skills = [
         "Spacy", "BERT", "LongT5", "SentenceTransformers",
         "ReactJS", "HTML", "CSS", "NLP"
       ],
-      image:'/elderwand.png'
+      image:elderwand
     }, 
     { id :2,
       title: "Resurrection Stone",
@@ -22,7 +25,7 @@ const skills = [
         "SQL", "Matplotlib", "Seaborn","PowerBI", "Tableau",
         "Office365","Latex"
       ],
-        image:'/stone.png'
+        image:stone
     },
     { id: 3,
       title: "Cloak of Invisibility",
@@ -33,7 +36,7 @@ const skills = [
         "Cross-functional Team Collaboration",
         "Git & GitHub"
       ],
-      image:'/cloak.png'
+      image:cloak
   }
 ];
 
