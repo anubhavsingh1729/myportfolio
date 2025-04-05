@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import Header from "./heading";
 import "../css/projects.css";
-import { link } from "motion/react-client";
+import scripturelm from "/scripturelm.webp";
+import pyspark from "/pyspark.png";
+
+
 
 const projects = [
-    {id : 1, title : 'ScriptureLM',  image: `${import.meta.env.BASE_URL}scripturelm.webp` ,
+    {id : 1, title : 'ScriptureLM',  image: scripturelm ,
         description : ' AI-powered semantic search and text summarisation using FastAPI, FAISS, and Google LongT5 LLM',
         tags : ['Python', 'FastAPI', 'LLM', 'FAISS', 'Google LongT5'],
         link:'https://medium.com/@anubhavsingh1729/building-scripturelm-ai-powered-bible-study-with-semantic-search-and-summarization-b0b40e27daf3'
     },
-    {id: 2, title : 'GitHub Commit Data Analysis', image:'/pyspark.png',
+    {id: 2, title : 'GitHub Commit Data Analysis', image:pyspark,
         description : 'PySpark pipeline for processing GitHub commits and visualizing trends.',
         tags : ['Python', 'PySpark', 'Data Analysis'],
         link:'https://medium.com/@anubhavsingh1729/aggregating-github-commit-data-using-a-pyspark-pipeline-0b3011a74017'
