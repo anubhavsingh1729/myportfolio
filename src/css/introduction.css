@@ -74,7 +74,7 @@
 
 .introduction::before {
   content: "";
-  background: linear-gradient(1turn,#15111d 40%,rgba(21,17,29,0));
+  background: linear-gradient(1turn,#0e0c0a 40%,rgba(21,17,29,0));
   position: absolute;
   bottom: 0;
   left: 0;

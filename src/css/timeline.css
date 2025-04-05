@@ -6,8 +6,8 @@
                     url(/stars.png),
                     url(/stars.png),
                     url(/stars.png),
-                    linear-gradient(180deg,#15111d,#323657 121.35%);
-
+                    linear-gradient(180deg,#18150d,#323657 121.35%);
+                    
     background-position: bottom, center 40%, top, center 80%;
     background-size: 100% auto,
     110% auto,
@@ -18,15 +18,14 @@
     background-repeat: no-repeat;
     position: relative;
     padding-bottom: 50px;
-    padding-top: 0;
+    padding-top: 50px;
 }
-
 
 .timeline-container::before {
     content: "";
     position: absolute;
     bottom: 50px;
-    top: 10%;
+    top: 15%;
     left: 25%;
     width: 4px;
     background-color: #ffffff;

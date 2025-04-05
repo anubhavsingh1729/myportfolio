@@ -101,9 +101,9 @@ const App = () => {
         </div>
         <div className="main">
         <Introduction />
+        <Skills />
         <VerticalTimeline />
         <Projects />
-        <Skills />
         </div>
       {/* <footer className='footer'>
         <p>© 2023 Anubhav Singh. All rights reserved.</p>
