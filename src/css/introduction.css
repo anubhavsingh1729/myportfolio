@@ -11,8 +11,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
-    padding-bottom: 10px;
+    max-width: 100%;
+    padding-bottom: 30px;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -31,8 +31,6 @@
     padding-bottom: 20px;
     /* padding-top: 0;  */ 
     z-index: 999;
-
-
   }
 
   .intro-head {
@@ -42,10 +40,15 @@
     font-family: harry7;
     font-weight: 1000px;
     font-size: 60px;
-    max-width: 50%;
+    max-width: 90%;
     text-transform: uppercase;
+    overflow: hidden;
+    white-space: normal; /* Allow text to wrap naturally */
+    word-wrap: normal; /* Prevent breaking words */
+    overflow-wrap: break-word; /* Ensure long words wrap properly */
+    word-break: keep-all;
   }
-
+  
   @font-face {
     font-family: "harry7";
     src: url(../assets/fonts/Harrypotter7.ttf) format("truetype");   
@@ -86,6 +89,7 @@
   height: 150px;
 }
 
+
 @media (max-width: 768px) {
   .header h1 {
       font-size: 1.5rem;
@@ -98,3 +102,26 @@
 }
 }
 
+
+.magic-ink span {
+  opacity: 0;
+  display: inline-block;
+  color: #3b1f0f;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  animation: soakIn 0.5s forwards;
+  text-shadow: 0 0 3px #00000077;
+}
+
+@keyframes soakIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.2) rotate(2deg);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}

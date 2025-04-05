@@ -1,0 +1,99 @@
+.contact-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.contact-form-container {
+    background: url('/parchment.png'); /* Parchment texture image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%;
+    height: 80%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid #8B4513; /* Dark brown border for parchment effect */
+    color: #4B2E2E; /* Dark brown text color */
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4B2E2E; /* Dark brown text color */
+    text-shadow: 2px 2px 0px #8B4513; /* Subtle shadow for vintage effect */
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #4B2E2E;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid #8B4513; /* Dark brown border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    color: #4B2E2E;
+}
+
+#message {
+    height: 200px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(75, 46, 46, 0.7); /* Light brown placeholder text */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid #D2691E; /* Highlighted border on focus */
+    background: rgba(255, 255, 255, 0.5); /* Fully opaque background on focus */
+}
+
+.submit-button,
+.close-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #8B4513; /* Dark brown button background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.submit-button:hover,
+.close-button:hover {
+    background: #D2691E; /* Lighter brown on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.close-button {
+    background: #8B0000; /* Dark red for the close button */
+}
+
+.close-button:hover {
+    background: #A52A2A; /* Lighter red on hover */
+}

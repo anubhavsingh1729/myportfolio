@@ -26,25 +26,44 @@
     position: absolute;
     bottom: 50px;
     top: 10%;
-    left: 50%;
+    left: 25%;
     width: 4px;
     background-color: #ffffff;
     transform: translateX(-50%);
     z-index: 1;
-    animation: shimmer 2s infinite alternate ease-in-out;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    /* animation: shimmer 2s infinite alternate ease-in-out; */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.5) 100%
+      ); /* Gradient simulating light */
+    animation: light-travel 1s infinite linear alternate ease-in-out;
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)); */
 
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
 }
 
 .item-container {
-    background: rgba(50, 54, 87, 0.2);
+    background: rgba(50, 54, 87, 0.5);
+    display: flex;
     position: relative;
-    width: 30%;
-    margin: 20px;
-    height: 200px;
+    width: 50%;
+    left: 10%;
+    height: fit-content;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
+    margin: 0;
+    align-items: center;
 }
+
 .item-container.left {
     left: 14%
 
@@ -57,10 +76,32 @@
 .item-content {
     width: 100%;
     height: 100%;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
+    padding-left: 20px;
     color: #ffffff;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.item-content h2 {
+  margin: 2px; /* Remove default margin */
+  font-size: 1.2rem; /* Adjust heading size */
+  font-weight: bold; /* Make it stand out */
+}
+
+.item-content h3 {
+  margin: 2px; /* Remove default margin */
+  font-size: 1rem; /* Adjust subheading size */
+  font-weight: 600; /* Slightly bold */
+}
+
+.item-content p {
+  margin: 2px; /* Remove default margin */
+  font-size: 0.9rem; /* Adjust paragraph size */
+  font-weight: 400; /* Normal weight for paragraphs */
 }
 
 .notch {
@@ -71,7 +112,8 @@
     border-style: solid;
     border-width: 20px;
     transform: translateY(-10%);
-
+    left: -40px; 
+    border-color: transparent  rgba(50, 54, 87, 0.5) transparent transparent;
   }
 
 .left .notch {
@@ -87,7 +129,7 @@
 
   .icon {
     top: 80px;
-    left: 48%;
+    left: -25%;
     position: relative;
     width: 60px;
     height: 60px;
@@ -111,7 +153,15 @@
   }
   
   @keyframes shimmer {
-    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
-    100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+    100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
   }
   
+  @keyframes light-travel {
+    0% {
+        background-position: 0% 0%; /* Start at the top */
+    }
+    100% {
+        background-position: 0% 100%; /* Move to the bottom */
+    }
+}
