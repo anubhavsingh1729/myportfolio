@@ -26,6 +26,9 @@ const MaraudersMap = ({ setIsMapActive }) => {
         {/* <button className="toggle-button" onClick={toggleMap}>
         {isActive ? 'Mischief Managed' : 'I solemnly swear I am up to no good'}
       </button> */}
+      {!isActive && (
+        <div className="click"><p>open</p></div>
+      )}
       <div className={`map-base ${isActive ? 'active' : ''}`}>
 
         <div className="map-flap flap--1">

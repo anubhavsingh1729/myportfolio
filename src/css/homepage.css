@@ -358,6 +358,30 @@ aside.context {
 	border: #281f19 1px solid;
   }
 
+  .click {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 150px;
+	height: 150px;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 70%, transparent 100%);
+	border-radius: 50%;
+	animation: pulse 2s infinite ease-in-out;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .click p {
+	font-size: 30px;
+	font-weight: 500;
+	color: #281f19;
+	margin: 0; /* Remove default margin */
+	text-align: center; /* Ensure the text is centered */
+  }
+
 @keyframes slideDown {
 	0% {
 		top:-100px;
@@ -391,9 +415,27 @@ aside.context {
 	text-align: center;
 	width: 6rem;
   }
+
+
   
   @keyframes bounce {
 	50% {
 	  transform: translateY(-50%);
+	}
+  }
+
+  /* Pulse animation for the radial glow */
+@keyframes pulse {
+	0% {
+	  transform: translate(-50%, -50%) scale(1);
+	  opacity: 1;
+	}
+	50% {
+	  transform: translate(-50%, -50%) scale(1.2);
+	  opacity: 0.7;
+	}
+	100% {
+	  transform: translate(-50%, -50%) scale(1);
+	  opacity: 1;
 	}
   }
