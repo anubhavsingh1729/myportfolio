@@ -37,7 +37,7 @@ aside.context {
 	width: 306px;
 	height: 600px;
 	margin: auto;
-	background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/9.png") center center / cover;
+	background: url("/map/9.png") center center / cover;
 	position: relative;
 	display: inline-block;
 }
@@ -67,22 +67,22 @@ aside.context {
 		box-shadow: 0 -1px 6px rgba(#615349, 0.5);
 }
 .map-flap.flap--1.map-flap__front {
-			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-1.png") center left /
+			background: url("/map/mini-1.png") center left /
 				cover;
 		}
 .map-flap.flap--1.map-flap__back {
-			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-3.png") -3px 0/ cover;
+			background: url("/map/mini-3.png") -3px 0/ cover;
 		}
 
 .map-flap.flap--2 {
 		box-shadow: 0 1px 6px rgba(#615349, 0.5);
 		top: 50%;
 		.map-flap__front {
-			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-2.png") center left /
+			background: url("/map/mini-2.png") center left /
 				cover;
 		}
 		.map-flap__back {
-			background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/mini-4.png") -3px 0/ cover;
+			background: url("/map/mini-4.png") -3px 0/ cover;
 		}
 	}
 
@@ -104,7 +104,7 @@ aside.context {
 		backface-visibility: hidden;
 	}
 	.back {
-		background-image: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/back.png);
+		background-image: url(/map/back.png);
 	}
 }
 
@@ -135,7 +135,7 @@ aside.context {
 	&.side-5 {
 		left: 0;
 		.back {
-			background-image: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/1.png);
+			background-image: url(/map/1.png);
 		}
 	}
 	&.side-6 {
@@ -144,7 +144,7 @@ aside.context {
 			background-size: 99.5%;
 		}
 		.back {
-			background-image: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/17.png);
+			background-image: url(/map/17.png);
 		}
 	}
 }
@@ -157,7 +157,7 @@ aside.context {
   height: 30px;
 	font: 15px Satisfy, cursive;
 	text-align:center;
-	background: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/scroll.svg') center center / cover;
+	background: url('/map/scroll.svg') center center / cover;
 	z-index: 10;
 	color: #615349;
 	cursor: default;
@@ -386,4 +386,3 @@ aside.context {
 	80% { transform: translate(-170px, -25px) }
 	100% { transform: translate(-180px, -25px) }
 }
-

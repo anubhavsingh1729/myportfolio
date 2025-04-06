@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import "../css/homepage.css";
+import map8 from "/map/8.png";
+import map18 from "/map/18.png";
+import map7 from "/map/7.png";
+import map10 from "/map/10.png";
+import map6 from "/map/6.png";
+import map11 from "/map/11.png";
 
 const MaraudersMap = () => {
     const [isActive, setIsActive] = useState(false);
@@ -31,7 +37,7 @@ const MaraudersMap = () => {
         <div className="map-side side-1">
           <div
             className="front"
-            style={{ "--image": "url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/8.png')" }}
+            style={{ "--image": `url(${map8})` }}
           ></div>
           <div className="back"></div>
         </div>
@@ -39,7 +45,7 @@ const MaraudersMap = () => {
         <div className="map-side side-2">
           <div
             className="front"
-            style={{ "--image": "url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/18.png')" }}
+            style={{ "--image": `url(${map18})` }}
           ></div>
           <div className="back"></div>
         </div>
@@ -47,7 +53,7 @@ const MaraudersMap = () => {
         <div className="map-side side-3">
           <div
             className="front"
-            style={{ "--image": "url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/7.png')" }}
+            style={{ "--image": `url(${map7})` }}
           ></div>
           <div className="back"></div>
         </div>
@@ -55,14 +61,14 @@ const MaraudersMap = () => {
         <div className="map-side side-4">
           <div
             className="front"
-            style={{ "--image": "url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/10.png')" }}
+            style={{ "--image": `url(${map10})` }}
           ></div>
         </div>
 
         <div className="map-side side-5">
           <div
             className="front"
-            style={{ "--image": "url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/6.png')" }}
+            style={{ "--image": `url(${map6})`}}
           ></div>
           <div className="back"></div>
         </div>
@@ -70,7 +76,7 @@ const MaraudersMap = () => {
         <div className="map-side side-6">
           <div
             className="front"
-            style={{ "--image": "url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/11.png')" }}
+            style={{ "--image": `url(${map11})` }}
           ></div>
           <div className="back"></div>
         </div>
