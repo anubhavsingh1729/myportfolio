@@ -57,7 +57,7 @@ const Education = () => {
     const [selectedItem, setSelectedItem] = useState(education[0]);
 
     return (
-        <div className="education-container">
+        <div id = "education" className="education-container">
             <Header heading={"Education and Work Experience"} />
             <div className="education-content">
                 <div className="left-content">

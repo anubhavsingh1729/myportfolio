@@ -6,13 +6,17 @@ import map7 from "/map/7.png";
 import map10 from "/map/10.png";
 import map6 from "/map/6.png";
 import map11 from "/map/11.png";
+import solemnlyswear from "/map/solemnlyswear.png";
+import myimage from "/map/myimage.jpeg";
 
-const MaraudersMap = () => {
+const MaraudersMap = ({ setIsMapActive }) => {
     const [isActive, setIsActive] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     const toggleMap = () => {
-      setIsActive(!isActive);
+        const newState = !isActive;
+        setIsActive(newState);
+        setIsMapActive(newState);
     };
 
   return (
@@ -81,6 +85,19 @@ const MaraudersMap = () => {
           <div className="back"></div>
         </div>
       </div>
+      {isActive && (
+            <div className="aboutme-text">
+                <div className="images">
+                    <img src = {myimage} className="myimage" />
+                    <img src={solemnlyswear} className="aboutme-img"/>
+                </div>
+                <p>Data wizard trained in the mystical arts of Machine learning, 
+                    Python, SQL and BI spellcraft. Skilled in taming unruly data, conjuring insights, 
+                    and crafting visual enchantments.</p>
+                <div className="scroll-indicator">
+                </div>
+            </div>
+      )}
     </div>
   );
 };

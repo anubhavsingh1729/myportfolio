@@ -65,6 +65,7 @@ const App = () => {
   // }, []);
 
   const [showContactForm, setShowContactForm] = useState(false);
+  const [isMapActive, setIsMapActive] = useState(false);
 
   const toggleContactForm = () => {
     setShowContactForm(!showContactForm);
@@ -100,10 +101,14 @@ const App = () => {
           </header>
         </div>
         <div className="main">
-        <Introduction />
-        <Skills />
-        <Education />
-        <Projects />
+        <Introduction setIsMapActive={setIsMapActive} />
+        {isMapActive && (
+          <>
+          <Skills />
+          <Education />
+          <Projects />
+          </>
+        )}
         </div>
       {/* <footer className='footer'>
         <p>© 2023 Anubhav Singh. All rights reserved.</p>

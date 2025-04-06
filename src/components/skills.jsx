@@ -42,7 +42,7 @@ const skills = [
 
 const Skills = () => {
     return  (
-        <div className="skills">
+        <div id= "skills" className="skills">
             <Header heading="Skills" />
             <div className="skills-list">
                 {skills.map((skill, index) => (
