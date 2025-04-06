@@ -336,8 +336,8 @@ aside.context {
 .aboutme-text p {
 	color:  #281f19;
 	font: 36px Satisfy, cursive;
-	font-weight: 1000;
-	text-shadow: 2px 2px 5px rgba(255, 253, 253, 0.7);
+	font-weight: 900;
+	text-shadow: 2px 2px 5px rgba(255, 253, 253, 0.9);
 
 }
 .images {
@@ -377,15 +377,16 @@ aside.context {
 
   .scroll-indicator::before {
 	animation: bounce 1s ease infinite;
-	color: #fff;
+	color: #ffffff;
 	content: '╲╱';
-	font-size: 2rem;
+	font-size: 40px;
+	font-weight: 900;
 	height: 2rem;
 	left: 50%;
 	letter-spacing: -1px;
 	line-height: 4rem;
 	margin-left: -3rem;
-	opacity: 0.9;
+	opacity: 1;
 	position: absolute;
 	text-align: center;
 	width: 6rem;

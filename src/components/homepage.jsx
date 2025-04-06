@@ -91,8 +91,7 @@ const MaraudersMap = ({ setIsMapActive }) => {
                     <img src = {myimage} className="myimage" />
                     <img src={solemnlyswear} className="aboutme-img"/>
                 </div>
-                <p>Data wizard trained in the mystical arts of Machine learning, 
-                    Python, SQL and BI spellcraft. Skilled in taming unruly data, conjuring insights, 
+                <p>Data wizard trained in the mystical arts of Data Science and Machine learning. Skilled in taming unruly data, conjuring insights, 
                     and crafting visual enchantments.</p>
                 <div className="scroll-indicator">
                 </div>
