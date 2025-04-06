@@ -47,7 +47,7 @@ import Projects from './components/projects';
 import Skills from './components/skills';
 import "./css/contactform.css"
 import owl from "/owl.png";
-import MaraudersMap from './components/homepage';
+import Education from './components/education';
 
 const App = () => {
   // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -102,7 +102,7 @@ const App = () => {
         <div className="main">
         <Introduction />
         <Skills />
-        <VerticalTimeline />
+        <Education />
         <Projects />
         </div>
       {/* <footer className='footer'>

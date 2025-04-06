@@ -1,83 +1,82 @@
 import { motion } from "framer-motion";
-import "../css/education.css"; 
+import React, { useState } from "react";
+import "../css/education.css"
+import Header from "./heading";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 const education = [
-    {id : 1, degree : 'MSc. Data Science', university : 'Friedrich-Alexander-Universität', 
-        year:'2022-2025', location:'Erlangen-Nürnberg, Germany', specialization: 'Machine Learning / Artificial Intelligence', 
-        project: 'Thesis: Deterministic Classification of Git Commits for Transfer Pricing Functions',
-        courses : ['Deep Learning', 'Patten Recognition', 'Methods of Advanced Data Engineering', 
-            'Knowledge Discovery in Databases', 'AI in Medical Robotics', 'Biomedical Signal Analysis', 
-            'Artificial Intelligence', 'Machine learning In finance.']
-    },
+  {id : 1, degree : 'MSc. Data Science', 
+    university : 'Friedrich-Alexander-Universität', 
+      year:'Oct 2022 - Mar 2025', location:'Erlangen, Germany', 
+      project: 'Thesis: Deterministic Classification of Git Commits for Transfer Pricing Functions',
+      description : 'Specialisation: Machine Learning / Artificial Intelligence',
+      img: '/timeturner.gif',type:"ed"
+  },
 
-    {id : 2, degree : 'B.Tech Computer Science and Engineering', university : 'Jaypee University of Engineering and Technology', 
-        year:'2016-2020', location:'Guna, India', specialization:'', project: 'Project: Image Captioning','courses' : []
-    },
-    {id : 3, degree : '3 MSc. Data Science', university : 'Friedrich-Alexander-Universität', 
-        year:'2022-2025', location:'Erlangen-Nürnberg, Germany', specialization: 'Machine Learning / Artificial Intelligence', 
-        project: 'Thesis: Deterministic Classification of Git Commits for Transfer Pricing Functions',
-        courses : ['Deep Learning', 'Patten Recognition', 'Methods of Advanced Data Engineering', 
-            'Knowledge Discovery in Databases', 'AI in Medical Robotics', 'Biomedical Signal Analysis', 
-            'Artificial Intelligence', 'Machine learning In finance.']
-    },
+  {id : 2, degree : 'Student Researcher', 
+    university : 'FAU Professorship for Open-Source Software', 
+      year:'Apr 2024 - Sep 2024', location:'Erlangen, Germany',  
+      project: '',
+      img: '/timeturner.gif',type:'emp',
+      description: 'Managed an independent research project analyzing Github commit data. Designed unit and Integration test scripts for Pyspark data pipelines. Developed dashboards to visualize git commit metrics productivity and trends'
+  },
+  {id : 3, degree : 'Data Analyst & ETL Developer', 
+    university : 'Tata Consultancy Services', 
+      year:'Feb 2021 - Aug 2022', location:'Delhi, India',  
+      project: '',
+      description:'Developed and deployed data-driven solutions in an agile environment for pharmaceutical manufacturing client, focused on data integration, analytics and Business Intelligence reporting',
+      img: '/timeturner.gif',type:'emp'
+  },
 
-    {id : 4, degree : '4 B.Tech Computer Science and Engineering', university : 'Jaypee University of Engineering and Technology', 
-        year:'2016-2020', location:'Guna, India', specialization:'', project: 'Project: Image Captioning','courses' : []
-    }
+  {id : 4, degree : 'B.Tech Computer Science and Engineering', 
+    university : 'Jaypee University of Engineering and Technology', 
+      year:'July 2016 - Aug 2020', location:'Guna, India', 
+      project: 'Project: Image Captioning',
+      img: '/timeturner.gif',type:'ed',
+      description: ''
+
+  }
 ]
 
-const EduItem = ({ title,specialization, university,location,year,project,courses,index}) => {
-  return (
-    <motion.div
-    className = "education-item"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 2 }}
-    viewport={{ once: true }}
-    >
-      <h3>{title}</h3>
-      <h2>{specialization}</h2>
-      <p>{university}</p>
-      <p>{location}, {year}</p>
-      <p>{project}</p>
-    </motion.div>
-  );
-};
-
 const Education = () => {
-  return (
-    <div className="education">
-        <div class="heading-container">
-            <span class="line"></span> 
-            <span class="diamond"></span>
-            <span>◆</span>
-            <div class="round-icon">
-                <img src="/timeturner.gif" alt="Time Turner" />
-            </div>
-            <span>◆</span>
-            <span class="diamond"></span>
-            <span class="line"></span>
-        </div>
-        <div className="magicline">
-            <div className="education-container">
-            {education.map((edu,index) => (
-                <EduItem key={edu.id} title={edu.degree} specialization={edu.specialization} 
-                    university={edu.university} location={edu.location} year={edu.year} project={edu.project}
-                    courses={edu.courses} index={index}/>
-            ))}
-            </div>
-        </div>
 
-        {/* <div className="education-container">
-        {education.map((edu) => (
-            <EduItem key={edu.id} title={edu.degree} specialization={edu.specialization} 
-                university={edu.University} location={edu.location} year={edu.year} project={edu.project}
-                courses={edu.courses}/>
-        ))}
-        </div> */}
+    const [selectedItem, setSelectedItem] = useState(education[0]);
 
-    </div>
-  );
-};
+    return (
+        <div className="education-container">
+            <Header heading={"Education and Work Experience"} />
+            <div className="education-content">
+                <div className="left-content">
+                    <div className = "title-cards">
+                        {education.map((item, index) => (
+                            <div className={`item-card ${selectedItem.id === item.id ? 'active':''}`} 
+                                key={item.id} 
+                                onClick={() => setSelectedItem(item)}>
+                                <div className="card-content">
+                                    <h2>{item.degree}</h2>
+                                    <p>{item.university}</p>
+                                    <div className="ed-icon">
+                                        <FontAwesomeIcon icon={item.type === 'ed' ? faGraduationCap : faBriefcase} />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="right-content">
+                    <div className="item-details">
+                        <h2>{selectedItem.degree}</h2>
+                        <h3>{selectedItem.university}</h3>
+                        <p>{selectedItem.year}</p>
+                        <p>{selectedItem.location}</p>
+                        <p>{selectedItem.project}</p>
+                        <p>{selectedItem.description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      );
+}
 
 export default Education;
