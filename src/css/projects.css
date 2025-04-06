@@ -79,7 +79,7 @@
     border-top-right-radius: 12px;
 }
 
-.card-content {
+.project-card-content {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -87,6 +87,7 @@
     justify-content: center;
     background-color: rgba(0,0,27,0.3);
     font-weight: 400;
+
 }
 
 

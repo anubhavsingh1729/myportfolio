@@ -53,7 +53,7 @@ const ProjectItem = ({ project,index}) => {
                 <div className="card-header">
                     <img src = {project.image} />
                 </div>
-                <div className="card-content">
+                <div className="project-card-content">
                 <h3 className="card-title">{project.title}</h3>
                 <p>{project.description}</p>
                 <div className="tags">
