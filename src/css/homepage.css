@@ -20,7 +20,7 @@ aside.context {
 
 
 .main-content {
-	position: relative;
+	position: absolute;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -30,6 +30,8 @@ aside.context {
 	height: fit-content;
 	gap: 20px;
 	z-index: 1000;
+	top: 18%;
+	bottom: 0;
 
 }
 

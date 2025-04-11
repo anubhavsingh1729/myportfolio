@@ -1,0 +1,53 @@
+.certificate-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-image: url(/horizons_bridge.png),
+    url(/stars.png),
+    linear-gradient(180deg,#0e0812,#443455 121.35%);
+    background-position: bottom, center 40%;
+    background-size: 120% auto,
+    110% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: fit-content;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.certificate-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    gap: 30px;
+}
+
+.certificate-card {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/cardborder.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    gap: 40px;
+}
+
+.certificate-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.certificate-card a{
+    color: #fff;
+}
+
+.certificate-card a:hover{
+    color: #D4AF37;
+}

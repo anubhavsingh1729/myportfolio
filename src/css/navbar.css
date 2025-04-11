@@ -1,9 +1,14 @@
 /* Navbar Section */
+html {
+  scroll-behavior:smooth;
+}
+
 .navbar {
     position: relative;
     left: 0;
-    width: 100vw;
-    padding: 10px 0;
+    width: 100%;
+    height: fit-content;
+    padding: 5px 0;
     background-color: #00001b;
     display: flex;
     flex-direction: column;
@@ -17,8 +22,9 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center menu items horizontally */
-    gap: 10px; /* Adds spacing between menu items */
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
   }
   
   .navbar ul li {
@@ -28,8 +34,8 @@
   .navbar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    padding: 10px 0px;
+    font-size: 1.2rem;
+    padding: 20px 0px;
     transition: color 0.3s ease;
   }
   

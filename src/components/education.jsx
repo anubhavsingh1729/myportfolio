@@ -6,7 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 const education = [
-  {id : 1, degree : 'MSc. Data Science', 
+  {id : 1, degree : 'Master of Science', 
+    course : 'Data Science',
+    title : 'MSc. Data Science',
     university : 'Friedrich-Alexander-Universität', 
       year:'Oct 2022 - Mar 2025', location:'Erlangen, Germany', 
       project: 'Thesis: Deterministic Classification of Git Commits for Transfer Pricing Functions',
@@ -16,7 +18,9 @@ const education = [
       img: '/timeturner.gif',type:"ed"
   },
 
-  {id : 2, degree : 'Student Researcher', 
+  {id : 2, title : 'Student Researcher', 
+    degree : 'Student Researcher',
+    course:'',
     university : 'FAU Professorship for Open-Source Software', 
       year:'Apr 2024 - Sep 2024', location:'Erlangen, Germany',  
       project: '',
@@ -27,7 +31,9 @@ const education = [
         "Developed dashboards to visualize git commit metrics productivity and trends."
       ]
   },
-  {id : 3, degree : 'Data Analyst & ETL Developer', 
+  {id : 3, title : 'Data Analyst', 
+    degree:'Data Analyst & ETL Developer',
+    course : '',
     university : 'Tata Consultancy Services', 
       year:'Feb 2021 - Aug 2022', location:'Delhi, India',  
       project: '',
@@ -42,7 +48,9 @@ const education = [
       img: '/timeturner.gif',type:'emp'
   },
 
-  {id : 4, degree : 'B.Tech Computer Science and Engineering', 
+  {id : 4, degree : 'Bachelor of Technology', 
+    course:'Computer Science and Engineering',
+    title:'B.Tech CSE',
     university : 'Jaypee University of Engineering and Technology', 
       year:'July 2016 - Aug 2020', location:'Guna, India', 
       project: 'Project: Image Captioning',
@@ -67,11 +75,11 @@ const Education = () => {
                                 key={item.id} 
                                 onClick={() => setSelectedItem(item)}>
                                 <div className="card-content">
-                                    <h2>{item.degree}</h2>
+                                <div className="ed-icon">
+                                    <FontAwesomeIcon icon={item.type === 'ed' ? faGraduationCap : faBriefcase} />
+                                    <h2>{item.title}</h2>
+                                  </div>
                                     <p>{item.university}</p>
-                                    <div className="ed-icon">
-                                        <FontAwesomeIcon icon={item.type === 'ed' ? faGraduationCap : faBriefcase} />
-                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -80,9 +88,9 @@ const Education = () => {
                 <div className="right-content">
                     <div className="item-details">
                         <h2>{selectedItem.degree}</h2>
-                        <h3>{selectedItem.university}</h3>
+                        <h2>{selectedItem.course}</h2>
+                        <h3>{selectedItem.university}, {selectedItem.location} </h3>
                         <p>{selectedItem.year}</p>
-                        <p>{selectedItem.location}</p>
                         <p>{selectedItem.project}</p>
                         {selectedItem.description.length>0 && (
                             <ul className="description-list">

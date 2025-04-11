@@ -48,6 +48,7 @@ import Skills from './components/skills';
 import "./css/contactform.css"
 import owl from "/owl.png";
 import Education from './components/education';
+import Certifications from './components/certifications';
 
 const App = () => {
   // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -99,6 +100,9 @@ const App = () => {
                 />
             </div>
           </header>
+          {isMapActive && (
+            <Navbar />
+          )}
         </div>
         <div className="main">
         <Introduction setIsMapActive={setIsMapActive} />
@@ -107,6 +111,7 @@ const App = () => {
           <Skills />
           <Education />
           <Projects />
+          <Certifications />
           </>
         )}
         </div>
