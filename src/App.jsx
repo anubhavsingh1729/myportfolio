@@ -109,8 +109,8 @@ const App = () => {
         {isMapActive && (
           <>
           <Skills />
-          <Education />
           <Projects />
+          <Education />
           <Certifications />
           </>
         )}

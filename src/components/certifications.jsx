@@ -29,7 +29,7 @@ const Certifications = () => {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <div className="certificate-container">
+        <div className="certificate-container" id="certifications">
             <Header heading={"Certifications"} />
             <div className="certificate-content">
             {certificates.map((certificate,index) => (
