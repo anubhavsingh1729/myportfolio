@@ -6,7 +6,8 @@ import pysparkimg from "/pyspark.png";
 import deeplabv3 from "/deeplabv3.jpg";
 import bert from "/bert.jpg";
 import made from "/made.png";
-import naghammdi from "/naghammadi.png"
+import naghammdi from "/naghammdi.png"
+
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
