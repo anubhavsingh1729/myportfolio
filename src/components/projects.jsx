@@ -6,12 +6,13 @@ import pysparkimg from "/pyspark.png";
 import deeplabv3 from "/deeplabv3.jpg";
 import bert from "/bert.jpg";
 import made from "/made.png";
+import naghammdi from "/naghammadi.png"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const projects = [
-    {id : 1, title : 'The Nag Hammadi Library',  image: scripturelm ,
+    {id : 1, title : 'The Nag Hammadi Library',  image: naghammdi ,
         description : ' full-stack NLP application with FastAPI, React, Mistral 7B, for theological comparision and entity graph visualization using optimized ML pipelines and RESTful APIs.',
         tags : ['Python', 'FastAPI', 'LLM', 'Mistral7B', 'React', 'spaCy','NER', 'Graph Visualization'],
         link:'https://medium.com/@anubhavsingh1729/building-scripturelm-ai-powered-bible-study-with-semantic-search-and-summarization-b0b40e27daf3',
