@@ -129,8 +129,28 @@
 }
 
 .view-github:hover {
-    color: #D4AF37;
+    background: #D4AF37;
     }
+
+.view-link {
+    color: white;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    background: #070b16;
+    opacity: 1;
+    border-radius: 12px;
+    width: fit-content;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.view-link:hover {
+    background: #D4AF37; /* Change background color on hover */
+}
 
 .tags {
     display: flex;
@@ -147,4 +167,10 @@
     font-size: 12px;
     white-space: nowrap;
     box-shadow: 0 2px 5px rgba(0,0,0,0,2);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
 }
