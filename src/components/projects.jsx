@@ -11,34 +11,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const projects = [
-    {id : 1, title : 'ScriptureLM',  image: scripturelm ,
-        description : ' AI-powered semantic search and text summarisation using FastAPI, FAISS, and Google LongT5 LLM',
-        tags : ['Python', 'FastAPI', 'LLM', 'FAISS', 'Google LongT5'],
+    {id : 1, title : 'The Nag Hammadi Library',  image: scripturelm ,
+        description : ' full-stack NLP application with FastAPI, React, Mistral 7B, for theological comparision and entity graph visualization using optimized ML pipelines and RESTful APIs.',
+        tags : ['Python', 'FastAPI', 'LLM', 'Mistral7B', 'React', 'spaCy','NER', 'Graph Visualization'],
         link:'https://medium.com/@anubhavsingh1729/building-scripturelm-ai-powered-bible-study-with-semantic-search-and-summarization-b0b40e27daf3',
         gitlink:'https://github.com/anubhavsingh1729/scriptureLM'
     },
-    {id: 2, title : 'GitHub Commit Data Analysis', image: pysparkimg,
+    {id : 2, title : 'ScriptureLM',  image: scripturelm ,
+        description : ' AI-powered semantic search and text summarisation using FastAPI, FAISS, and Google LongT5 LLM',
+        tags : ['Python', 'FastAPI', 'LLM', 'FAISS', 'Google LongT5','React'],
+        link:'https://medium.com/@anubhavsingh1729/building-scripturelm-ai-powered-bible-study-with-semantic-search-and-summarization-b0b40e27daf3',
+        gitlink:'https://github.com/anubhavsingh1729/scriptureLM'
+    },
+    {id: 3, title : 'GitHub Commit Data Analysis', image: pysparkimg,
         description : 'PySpark pipeline for processing GitHub commits and visualizing trends.',
         tags : ['Python', 'PySpark', 'Data Analysis'],
         link:'https://medium.com/@anubhavsingh1729/aggregating-github-commit-data-using-a-pyspark-pipeline-0b3011a74017',
         gitlink:'https://github.com/anubhavsingh1729/Github_activity_analysis'
 
     },
-    {id: 3, title : 'Road Scene Understanding for Visually Impaired', 
+    {id: 4, title : 'Road Scene Understanding for Visually Impaired', 
         image: deeplabv3,
         description : 'Sidewalk detection using DeepLabV3+ for visually impaired navigation.',
         tags : ['Python', 'DeepLabV3+', 'Computer Vision'],
         gitlink:'https://github.com/anubhavsingh1729/RSU-VI',
         link:''
     },
-    {id: 4, title : 'Deterministic Classification of Git Commits', 
+    {id: 5, title : 'Deterministic Classification of Git Commits', 
         image: bert,
         description : 'a machine learning-based framework for classifying GitHub commits according to the OECD\'s DEMPE functions, focusing on transfer pricing compliance.',
         tags : ['Python', 'Machine Learning', 'GitHub','Transfer Pricing','BERT','transfer learning'],
         gitlink:'https://github.com/anubhavsingh1729/dempe-classification',
         link:''
     },
-    {id: 5, title : 'Correlation analysis: R&D investment and HDI', 
+    {id: 6, title : 'Correlation analysis: R&D investment and HDI', 
         image: made,
         description : 'analyze how government spending on research and development activity affects the trend in human development index.',
         tags : ['Python', 'Data Analysis', 'Correlation Analysis'],
