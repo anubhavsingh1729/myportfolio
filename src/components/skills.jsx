@@ -8,7 +8,7 @@ import cloak from "/cloak.png";
 const skills = [
     { id: 1,
       title: "Elder Wand",
-      description: "Power, mastery and advanced technical prowess — the most powerful tools in my arsenal.",
+      description: "Power, mastery and advanced technical prowess:",
       items: [
         "Python", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Numpy",
         "HuggingFace Transformers", "Pattern Recognition",,
@@ -20,7 +20,7 @@ const skills = [
     }, 
     { id :2,
       title: "Resurrection Stone",
-      description: "Bringing ideas to life, revealing patterns and visualizing the unseen.",
+      description: "Bringing ideas to life:",
       items: [
         "SQL", "Matplotlib", "Seaborn","PowerBI", "Tableau",
         "Office365","Latex"
@@ -29,7 +29,7 @@ const skills = [
     },
     { id: 3,
       title: "Cloak of Invisibility",
-      description: "Subtle yet powerful — the interpersonal and collaborative skills that make things flow effortlessly.",
+      description: "Subtle yet powerful:",
       items: [
         "Project Presentation", "Requirement Gathering", 
         "Client & Stakeholder Communication",
