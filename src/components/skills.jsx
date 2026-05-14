@@ -50,7 +50,6 @@ const Skills = () => {
                       <div className="skill-icon">
                         <img src={skill.image} alt={skill.title} className="skill-image" />
                       </div>
-                        <p>{skill.description}</p> 
                         <ul className="skill-list">
                             {skill.items.map((item, index) => (
                                 <li className="skill-pill" key={index}>{item}</li>
